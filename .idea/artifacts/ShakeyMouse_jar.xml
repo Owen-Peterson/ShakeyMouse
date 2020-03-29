@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ShakeyMouse:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ShakeyMouse_jar</output-path>
+    <root id="archive" name="ShakeyMouse.jar">
+      <element id="module-output" name="ShakeyMouse" />
+    </root>
+  </artifact>
+</component>
