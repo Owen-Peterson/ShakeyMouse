@@ -1,29 +1,22 @@
 package com.owenpeterson;
 
 import java.awt.*;
-import java.awt.event.InputEvent;
 
 public class Main {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
-	// write your code here
-        Robot robot = new Robot();
 
+        Robot robot = new Robot();
 
         while (true) {
             PointerInfo a = MouseInfo.getPointerInfo();
             Point b = a.getLocation();
+
+            //Creates variables to be used for mouse logic
             int x = (int) b.getX();
             int y = (int) b.getY();
 
-            robot.mouseMove(x + 10 , y + 5);
-            Thread.sleep(25);
-            robot.mouseMove(x - 10 , y + 5);
-            Thread.sleep(25);
-            robot.mouseMove(x + 10 , y - 5);
-            Thread.sleep(25);
-            robot.mouseMove(x - 10 , y - 5);
-            Thread.sleep(25);
+            //Moves mouse the given coordinates +- a small value rapidly to "shake" the mouse
             robot.mouseMove(x + 10 , y + 5);
             Thread.sleep(25);
             robot.mouseMove(x - 10 , y + 5);
@@ -32,8 +25,8 @@ public class Main {
             Thread.sleep(25);
             robot.mouseMove(x - 10 , y - 5);
 
-
-            Thread.sleep(200);
+            //Slows the program slightly to allow actual usage of the mouse
+            Thread.sleep(150);
 
        }
 
